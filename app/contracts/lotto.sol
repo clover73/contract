@@ -1,12 +1,12 @@
 contract Lotto {
     
-    uint constant public blocksPerRound = 6800;
+    uint constant public blocksPerRound = 3600; //a round = is 3600 blucks or 22 hours
     // there are an infinite number of rounds (just like a real lottery that takes place every week). `blocksPerRound` decides how many blocks each round will last. 6800 is around a day.
 
-    uint constant public ticketPrice = 100000000000000000;
-    // the cost of each ticket is .1 ether.
+    uint constant public ticketPrice = BBTCLatestValue * .001;
+    // the cost of each ticket is .001 btc
 
-    uint constant public blockReward = 5000000000000000000;
+    uint constant public blockReward = .90 * TotalBTCValue;
 
     function getBlocksPerRound() constant returns(uint){ return blocksPerRound; }
     function getTicketPrice() constant returns(uint){ return ticketPrice; }
